@@ -13,12 +13,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
         with:
           path: main
 
       - name: Checkout VIAL QMK repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
         with:
           repository: vial-kb/vial-qmk
           submodules: recursive
