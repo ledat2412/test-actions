@@ -13,12 +13,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           path: main
 
       - name: Checkout VIAL QMK repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: vial-kb/vial-qmk
           submodules: recursive
@@ -40,7 +40,7 @@ jobs:
           qmk compile -kb ferris/sweep -km notatutorial -e CONVERT_TO=kb2040
 
       - name: Save firmware files
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: firmware-files
           path: |
